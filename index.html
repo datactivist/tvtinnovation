@@ -7,6 +7,8 @@
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/datactivist.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/datactivist-fonts.css" rel="stylesheet" />
+    <link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+    <script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, orientation=auto"/>
     <meta name="description" content="Open data on s&#39;inspire"/>
     <meta name="github-repo" content="datactivist/tvtinnovation"/>
@@ -27,6 +29,11 @@
     <meta property="og:locale" content="fr_FR"/>
     <meta property="og:site_name" content="Datactivist"/>
     <meta property="article:author" content="Datactivist"/>
+    <script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+    <link href="libs/vis-4.16.1/vis.min.css" rel="stylesheet" />
+    <script src="libs/vis-4.16.1/vis.min.js"></script>
+    <link href="libs/timeline-0.4/timevis.css" rel="stylesheet" />
+    <script src="libs/timevis-binding-0.5/timevis.js"></script>
   </head>
   <body>
     <textarea id="source">
@@ -174,12 +181,6 @@ class: inverse, center, middle
 ![](https://datactivist.coop/lewagon/img/osm_edit.png)
 
 ---
-## OpenStreetMap
-
-[![](https://datactivist.coop/lewagon/img/openinframap.png)](https://openinframap.org/#11.9/48.86066/2.33825/O,P)
-
-
----
 class: inverse, center, middle
 
 # 3. Une carte de la pollution de l'air dans les écoles
@@ -243,7 +244,7 @@ class: inverse, center, middle
 
 ---
 
-[![](./img/adresses.png)](https://adresse.data.gouv.fr/)
+[![](https://datactivist.coop/lewagon/img/adresses.png)](https://adresse.data.gouv.fr/)
 
 ---
 class: inverse, center, middle
@@ -266,37 +267,257 @@ http://www.villes-internet.net/actions/5bbf52afbb3eab784351e5c5
 ## 8. Les tests Covid
 
 .pull-left[
-Le 13 January 2020, 13 jours après l'annonce par la Chine d'un nouveau virus, le génome du SARS COV-2 a été publié sur la base internationale de données génétiques, GenBank.
+Le **5 janvier 2020**, 5 jours après l'annonce par la Chine d'un nouveau virus, les données du génome du SARS COV-2 ont été publiées dans la base internationale de données génétiques, GenBank.
 
-![:largeur 30%](img/genbank.png)
-
-.pull-left[
-Le 15 janvier 2020, 13 jours après l'annonce par la Chine d'un nouveau virus, le génome du SARS COV-2 a été publié sur la base internationale de données génétiques, GenBank.
-
-![:largeur 30%](img/pcr.png)]
-
-.footnote[Source : Wikipedia, [chronologie de la pandémie de Covid-19](https://en.wikipedia.org/wiki/Timeline_of_the_COVID-19_pandemic_in_January_2020)]
-
+![:largeur 80%](img/genbank.png)
 ]
 
 .pull-right[
+Le **15 janvier 2020**, 10 jours plus tard, sur la base de ces données, une équipe de recherches allemande crée le premier test PCR de dépistage de la Covid-19. 
+
+![](img/pcr.png)
 
 ]
+
+.footnote[Source : Wikipedia, [chronologie de la pandémie de Covid-19](https://en.wikipedia.org/wiki/Timeline_of_the_COVID-19_pandemic_in_January_2020)]
+
+---
+## 9. Les tableaux de bord de la Covid
+
+.center.reduite[
+[![](./img/hopkins.png)](https://www.lesechos.fr/monde/etats-unis/comment-luniversite-johns-hopkins-est-devenue-la-reference-pour-traquer-le-coronavirus-1224856)
+]
+
+---
+## 9. Les tableaux de bord de la Covid
+
+.reduite.center[![](./img/covidtracker.png)](https://covidtracker.fr/covidtracker-france/)
+
 ---
 class: inverse, center, middle
 
 
-# 10. Et pour finir... des cocktails !
+# 10. Et pour finir... des plantes !
 
 ---
-## Des recettes de cocktails 
+## 10. Plantnet
 
-&lt;iframe style="width: 80vw; height: 50vh; border: none;" src="https://query.wikidata.org/embed.html#%23defaultView%3AImageGrid%0ASELECT%20%3Fcocktail%20%3FcocktailLabel%20(SAMPLE(%3Frecipe)%20AS%20%3Frecipe)%20(SAMPLE(%3Fimage)%20AS%20%3Fimage)%0AWHERE%0A%7B%0A%20%20%7B%0A%20%20%20%20SELECT%20%3Fcocktail%20%3FcocktailLabel%20(GROUP_CONCAT(DISTINCT%20%3Fingredient%3B%20separator%3D%22%2C%20%22)%20AS%20%3FingredientsList)%20(GROUP_CONCAT(DISTINCT%20%3FgarnishLabel%3B%20separator%3D%22%2C%20%22)%20AS%20%3FgarnishList)%20(COUNT(DISTINCT%20%3Fingredient)%20%2B%20COUNT(DISTINCT%20%3FgarnishLabel)%20AS%20%3Fcount)%0A%20%20%20%20WHERE%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%3Fcocktail%20wdt%3AP31%2Fwdt%3AP279*%20wd%3AQ134768%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20p%3AP186%20%3FmaterialStat.%0A%20%20%20%20%20%20MINUS%20%7B%20%3FmaterialStat%20pq%3AP518%2Fwdt%3AP279*%20wd%3AQ2453629.%20%7D%0A%20%20%20%20%20%20MINUS%20%7B%20%3FmaterialStat%20ps%3AP186%20wd%3AQ488463%3B%20pq%3AP366%20wd%3AQ26876981.%20%7D%0A%20%20%20%20%20%20MINUS%20%7B%20%3FmaterialStat%20pq%3AP366%20wd%3AQ59541.%20%7D%0A%20%20%20%20%20%20%3FmaterialStat%20ps%3AP186%2Frdfs%3Alabel%20%3FmaterialLabel.%0A%20%20%20%20%20%20FILTER(LANG(%3FmaterialLabel)%20%3D%20%22en%22).%0A%20%20%20%20%20%20BIND(%3FmaterialLabel%20AS%20%3FingredientSolo).%0A%20%20%20%20%20%20OPTIONAL%20%7B%0A%20%20%20%20%20%20%20%20%3FmaterialStat%20ps%3AP186%2Frdfs%3Alabel%20%3FmaterialLabel%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20pq%3AP1114%20%3Fquantity.%0A%20%20%20%20%20%20%20%20FILTER(LANG(%3FmaterialLabel)%20%3D%20%22en%22).%0A%20%20%20%20%20%20%20%20BIND(CONCAT(STR(%3Fquantity)%2C%20%22%20%22%2C%20%3FmaterialLabel)%20AS%20%3FingredientWithQuantity).%0A%20%20%20%20%20%20%20%20OPTIONAL%20%7B%0A%20%20%20%20%20%20%20%20%20%20%3FmaterialStat%20pq%3AP1114%20%3Fquantity%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20ps%3AP186%2Frdfs%3Alabel%20%3FmaterialLabel%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20pqv%3AP1114%2Fwikibase%3AquantityUnit%20%3Funit.%0A%20%20%20%20%20%20%20%20%20%20FILTER(LANG(%3FmaterialLabel)%20%3D%20%22en%22).%0A%20%20%20%20%20%20%20%20%20%20FILTER(%3Funit%20!%3D%20wd%3AQ199).%0A%20%20%20%20%20%20%20%20%20%20%3Funit%20rdfs%3Alabel%20%3FunitLabel.%0A%20%20%20%20%20%20%20%20%20%20FILTER(LANG(%3FunitLabel)%20%3D%20%22en%22).%0A%20%20%20%20%20%20%20%20%20%20BIND(CONCAT(STR(%3Fquantity)%2C%20%22%20%22%2C%20IF(%3Fquantity%20%3D%201%2C%20%3FunitLabel%2C%20CONCAT(%3FunitLabel%2C%20IF(STRENDS(%3FunitLabel%2C%20%22sh%22)%2C%20%22es%22%2C%20%22s%22)))%2C%20%22%20%22%2C%20%3FmaterialLabel)%20AS%20%3FingredientWithUnit).%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20BIND(COALESCE(%3FingredientWithUnit%2C%20%3FingredientWithQuantity%2C%20%3FingredientSolo)%20AS%20%3Fingredient).%0A%20%20%20%20%20%20OPTIONAL%20%7B%0A%20%20%20%20%20%20%20%20%3Fcocktail%20p%3AP186%20%5B%20ps%3AP186%20%3Fgarnish%3B%20pq%3AP366%20wd%3AQ59541%20%5D.%0A%20%20%20%20%20%20%20%20%3Fgarnish%20rdfs%3Alabel%20%3FgarnishLabel.%0A%20%20%20%20%20%20%20%20FILTER(LANG(%3FgarnishLabel)%20%3D%20%22en%22).%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%3Fcocktail%20rdfs%3Alabel%20%3FcocktailLabel.%0A%20%20%20%20%20%20FILTER(LANG(%3FcocktailLabel)%20%3D%20%22en%22).%0A%20%20%20%20%7D%0A%20%20%20%20GROUP%20BY%20%3Fcocktail%20%3FcocktailLabel%0A%20%20%7D%0A%20%20BIND(%0A%20%20%20%20IF(REGEX(%3FingredientsList%2C%20%22%2C%20.*%2C%22)%2C%0A%20%20%20%20%20%20%20REPLACE(%3FingredientsList%2C%20%22(.*)%2C%20(.*)%22%2C%20%22%241%2C%20and%20%242%22)%2C%0A%20%20%20%20%20%20%20REPLACE(%3FingredientsList%2C%20%22(.*)%2C%20(.*)%22%2C%20%22%241%20and%20%242%22))%0A%20%20%20%20AS%20%3Fingredients).%0A%20%20BIND(%0A%20%20%20%20IF(REGEX(%3FgarnishList%2C%20%22%2C%20.*%2C%22)%2C%0A%20%20%20%20%20%20%20REPLACE(%3FgarnishList%2C%20%22(.*)%2C%20(.*)%22%2C%20%22%241%2C%20and%20%242%22)%2C%0A%20%20%20%20%20%20%20REPLACE(%3FgarnishList%2C%20%22(.*)%2C%20(.*)%22%2C%20%22%241%20and%20%242%22))%0A%20%20%20%20AS%20%3Fgarnishes).%0A%20%20OPTIONAL%20%7B%0A%20%20%20%20%3Fcocktail%20p%3AP186%20%5B%20ps%3AP186%20%3Fglass%3B%20pq%3AP518%2Fwdt%3AP279*%20wd%3AQ2453629%20%5D.%0A%20%20%20%20%3Fglass%20rdfs%3Alabel%20%3FglassLabel.%0A%20%20%20%20FILTER(LANG(%3FglassLabel)%20%3D%20%22en%22).%0A%20%20%20%20BIND(IF(REGEX(%3FglassLabel%2C%20%22%5E%5BAEIOUaeiou%5D%22)%2C%20%22an%22%2C%20%22a%22)%20AS%20%3Farticle).%0A%20%20%20%20BIND(CONCAT(%22%20in%20%22%2C%20%3Farticle%2C%20%22%20%22%2C%20%3FglassLabel)%20AS%20%3Fcontainer).%0A%20%20%20%20BIND(%22%2C%20served%22%20AS%20%3Fserved).%0A%20%20%7D%0A%20%20OPTIONAL%20%7B%0A%20%20%20%20%3Fcocktail%20p%3AP186%20%5B%20ps%3AP186%20wd%3AQ488463%3B%20pq%3AP366%20wd%3AQ26876981%20%5D.%0A%20%20%20%20BIND(%22%20on%20the%20rocks%22%20AS%20%3FonTheRocks).%0A%20%20%20%20BIND(%22%2C%20served%22%20AS%20%3Fserved).%0A%20%20%7D%0A%20%20OPTIONAL%20%7B%0A%20%20%20%20FILTER(STRLEN(STR(%3Fgarnishes))%20%3E%201).%0A%20%20%20%20BIND(CONCAT(%22%20with%20%22%2C%20%3Fgarnishes)%20AS%20%3Fgarnish).%0A%20%20%20%20BIND(%22%2C%20served%22%20AS%20%3Fserved).%0A%20%20%7D%0A%20%20BIND(CONCAT(%0A%20%20%20%20%3Fingredients%2C%0A%20%20%20%20COALESCE(%3Fserved%2C%20%22%22)%2C%0A%20%20%20%20COALESCE(%3FonTheRocks%2C%20%22%22)%2C%0A%20%20%20%20COALESCE(%3Fgarnish%2C%20%22%22)%2C%0A%20%20%20%20COALESCE(%3Fcontainer%2C%20%22%22))%0A%20%20%20%20AS%20%3Frecipe).%0A%20%20OPTIONAL%20%7B%20%3Fcocktail%20wdt%3AP18%20%3Fimage.%20%7D%0A%7D%0AGROUP%20BY%20%3Fcocktail%20%3FcocktailLabel%0AORDER%20BY%20DESC(MAX(%3Fcount))" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups"&gt;&lt;/iframe&gt;
+.reduite.center[
+[![](img/plantnet.png)](https://www.numerama.com/tech/281269-lapplication-plantnet-le-shazam-des-plantes-et-des-fleurs.html)
+]
 
 ---
-## Wikidata
+## 10. Plantnet
+.reduite.center[
+[![](img/plantnet1.png)](https://www.tela-botanica.org/2018/10/plantnet-mobile-sur-votre-ordinateur/)
+]
 
-[![](./img/wikidata.png)](https://www.wikidata.org/)
+
+---
+class: inverse, center, middle
+
+
+# Rappel des principes, contexte et cadre juridique de l'open data
+
+---
+class: inverse, center, middle
+
+# Les bénéfices de l'ouverture des données pour les territoires (étude de cas)
+
+
+---
+### [.red[L'open data : ]](https://books.openedition.org/cdf/5005?lang=fr) une notion aux multiples facettes
+
+.reduite.center[![](https://datactivist.coop/aaf/img/facettes.png)]
+
+---
+### Des principes techniques qui se sont imposés
+
+
+.reduite[![](https://datactivist.coop/metsem/ogdprinciples.png)]
+
+---
+### Et stabilisés dans la [charte internationale de l'open data](https://opendatacharter.net/)
+.reduite[.center[
+![](https://datactivist.coop/aaf/img/odcharter.png)
+]]
+
+---
+
+### Le guide CADA-CNIL : le document de référence
+
+Je n'indique ici que quelques éléments généraux sur le cadre juridique, ce guide constitue votre source de référence. Joël Gombin, co-fondateur de Datactivist, a publié sa [fiche de lecture](https://teamopendata.org/t/guide-commun-cnil-et-cada-open-data-rgpd/1320) sur TeamOpenData.
+
+.reduite[.center[
+[![](https://datactivist.coop/aaf/img/guide.png)](https://www.cnil.fr/sites/default/files/atoms/files/guide_open_data.pdf)
+]]
+
+---
+
+### 1978 : La loi CADA, vers le "droit de savoir"
+
+* Le fondement : la .red[Déclaration des Droits de l'Homme et du Citoyen de 1789] dans son article 15, "la Société a le droit de demander compte à tout Agent public de son administration." 
+
+* Le droit d'accès des citoyens à l'information publique émerge en **1978 avec la loi dite CADA** du nom de la Commission d'Accès aux Documents Administratifs. 
+
+* La France était le .red[3e pays au monde] après la Suède en 1766 et les Etats-Unis en 1966 avec le Freedom of Information Act (FOIA) en 1966  à accorder un "droit de savoir" avec pour but d'améliorer les relations entre le public et l'administration.
+
+.footnote[Il faudrait maintenant désigner la loi comme le Code des relations entre le public et l'administration (CRPA) qui, dans son [livre 3](https://www.legifrance.gouv.fr/affichCode.do;jsessionid=BDF8EC0BD562E214CCD9A5ADD435D690.tplgfr42s_1?idSectionTA=LEGISCTA000031367685&amp;cidTexte=LEGITEXT000031366350&amp;dateTexte=20190429), codifie le droit d'accès et de réutilisation mais il est encore moins connu que la loi CADA…]
+
+
+---
+### Les conditions d'exercice du droit d'accès
+
+.red[ Une définition très large des documents administratifs]
+&gt; Les documents administratifs peuvent revêtir de nombreuses formes (dossiers, rapports, études, comptes rendus, procès-verbaux, statistiques, directives, instructions, circulaires, codes sources, etc.) et adopter tout support (écrit, enregistrement sonore ou visuel, forme numérique ou informatique). 
+
+Le droit d'accès s'appplique aux documents administratifs produits dans le cadre d'une .red[mission de service public] ie :
+&gt; Une mission d'intérêt général sous le contrôle de l'administration et qui est dotée à cette fin de prérogatives de puissance publique est chargée de l'exécution d'un service public. 
+
+Il ne s’exerce que si l’administration a effectivement en sa possession le document demandé, que si le document est formellement **achevé**, qu'il existe et qu'il n'est pas **préparatoire à une décision administrative** en cours. 
+
+---
+### Les exclusions au droit d'accès
+
+Le droit d'accès .red[**ne doit pas porter atteinte aux secrets protégés**] : 
+- le fonctionnement de l'État : délibérations du Gouvernement, secret de la défense nationale, la conduite de la politique extérieure de la France, la sûreté de l'État…
+- la protection de la vie privée
+- le secret médical
+- le secret des affaires (secret des procédés, des informations économiques et financières et
+des stratégies commerciales ou industrielle)
+- les mentions portant une appréciation ou un jugement de valeur sur une personne physique ou
+faisant apparaître un comportement d'une personne pouvant lui porter préjudice…
+
+Le document ne peut être publié qu'après avoir fait l'objet d'un traitement permettant
+d'.red[**occulter les mentions protégées**]. L’administration n’est pas tenue de publier un document lorsque “les travaux d’occultation dénatureraient ou videraient de sens le document” ou si “le document est indivisible ou l’occultation est trop complexe”.
+---
+### Le cas des données personnelles
+
+La prohibition de la communication à des tiers ne porte pas sur les données personnelles en général, mais .red[**sur les données à caractère personnel relevant de la vie privée**] des personnes concernées (âge, coordonnées personnelles, situation patrimoniale et financière, sympathies politiques, les croyances religieuses…)
+
+La mise en ligne de données à caractère personnel sans anonymisation n'est permise que dans .red[**trois cas**] :
+1. une disposition législative contraire le prévoit (exemple : [Transparence Santé](https://www.data.gouv.fr/fr/datasets/transparence-sante-1/))
+2. si les personnes intéressées ont donné leur accord (consentement au sens de l’article 4 du RGPD)
+3. les documents relevant de [l’article D312-3-1 du CRPA](https://www.legifrance.gouv.fr/affichTexte.do;jsessionid=51E99AF738C12521572D6A7F6C8C03E8.tplgfr23s_1?cidTexte=JORFTEXT000037797147&amp;dateTexte=&amp;oldAction=rechJO&amp;categorieLien=id&amp;idJO=JORFCONT000037796937)
+
+
+Hors de ces cas, il faut .red[**[anonymiser les données](https://github.com/SGMAP-AGD/anonymisation/wiki/Guide-de-l'anonymisation)**] : elles ne doivent plus se référer à une personne réelle (exit les noms, identifiants…) et ne doivent plus être spécifiques à un individu mais communes à un ensemble de personnes. L’indexation de ces données par un moteur de recherche externe est proscrite.
+
+
+---
+### Du droit d'accès au droit de réutilisation
+
+Alors qu'aux Etats-Unis les données publiques sont placées dans le domaine public depuis les années 70, la question de la réutilisation des données publiques a émergé en France et en Europe dans les années 1990 avec le développement d'Internet facilitant la diffusion des données publiques et le développement de nouveaux services au public. Quelques jalons :
+
+<div id="htmlwidget-d4f6ffb904172c74a420" class="timevis html-widget" style="width:715px;height:350px;">
+<div class="btn-group zoom-menu">
+<button type="button" class="btn btn-default btn-lg zoom-in" title="Zoom in">+</button>
+<button type="button" class="btn btn-default btn-lg zoom-out" title="Zoom out">-</button>
+</div>
+</div>
+<script type="application/json" data-for="htmlwidget-d4f6ffb904172c74a420">{"x":{"items":[{"id":"1","content":"Loi CADA","start":"1978-07-17"},{"id":"2","content":"Directive PSI","start":"2003-11-17"},{"id":"3","content":"Directive INSPIRE","start":"2007-03-14"},{"id":"4","content":"Révision de la directive PSI","start":"2013-06-13"},{"id":"5","content":"Loi Notre","start":"2015-08-07"},{"id":"6","content":"Loi Valter","start":"2015-12-28"},{"id":"7","content":"Loi pour une République Numérique","start":"2016-10-07"}],"groups":null,"showZoom":true,"zoomFactor":0.5,"fit":true,"options":[],"height":"350px","api":[]},"evals":[],"jsHooks":[]}</script>
+
+---
+
+### Loi pour une République Numérique : l'ouverture des données par défaut
+
+&lt;img style="float: right;margin:10px" src="./img/repnum.jpg"&gt;
+Promulguée le 7 octobre 2016, après 4 ans d'annonces et de consultation, le titre 1 de la [loi pour une République  Numérique](https://www.legifrance.gouv.fr/affichTexte.do;jsessionid=B5632993E54F7CCC2606664B64CDF612.tpdila11v_1?cidTexte=JORFTEXT000033202746&amp;categorieLien=id) porte sur l'ouverture des données publiques. 
+
+La loi impose un principe d'.red[**ouverture des données par principe**] qui ne fait pas l'objet de sanctions à toutes les administrations, les entreprises délégataires d'une mission de service public et les .red[**collectivités locales de plus de 3500 habitants et 50 agents**]. 
+
+L'ouverture concerne un .red[**périmètre très large**] : 
+* les documents communiqués suite à des demandes CADA
+* les "bases de données"
+* les données "dont la publication présente un intérêt économique, social, sanitaire ou environnemental".
+Rares sont donc les données publiques qui ne sont pas concernées par cette obligation d'ouverture. 
+
+
+---
+### Loi pour une République numérique : une limitation des licences
+
+La loi **limite par décret les licences** qui peuvent être utilisées par les administrations. Le [décret du 27 avril 2017](https://www.legifrance.gouv.fr/eli/decret/2017/4/27/2017-638/jo/texte) autorise deux licences : 
+
+* la Licence Ouverte d'Etalab 
+
+* la licence ODbL (Open Database License).
+
+Ces deux licences offrent **un choix aux administrations** : la licence ouverte étant plus permissive que la licence ODBL qui a été conçue dans une logique de "pot commun" permettant de garantir que les données resteront ouvertes après leur réutilisation.
+
+Utiliser une autre licence impose une **homologation** auprès de la DINSIC avec un exposé des motifs ayant conduit à sortir de la liste fixée dans le décret et une consultation des usagers affectés par la licence proposée. L'homologation doit être faite pour chaque jeu de données même si la licence reste la même.
+
+---
+### Loi pour une République numérique : une limitation des licences
+
+.reduite.center[
+[![](./img/licences.png)](http://www.opendatalab.fr/index.php/laboratoire/le-kit-collectivites)
+]
+.footnote[source : [SGAR Occitanie](http://www.opendatalab.fr/index.php/laboratoire/le-kit-collectivites)]
+
+
+---
+### Exemple de données ouvertes : la [base SIRENE](https://www.data.gouv.fr/fr/datasets/base-sirene-des-entreprises-et-de-leurs-etablissements-siren-siret/)
+
+.reduite.center[![](https://datactivist.coop/aaf/img/sirene.png)]
+
+---
+### Exemple de données ouvertes : la [base adresse nationale](https://www.data.gouv.fr/fr/datasets/base-adresse-nationale/)
+.reduite[.center[![](https://datactivist.coop/aaf/img/ban.png)]]
+
+---
+### Exemple de données ouvertes : les [accidents de la route](https://www.data.gouv.fr/fr/datasets/base-de-donnees-accidents-corporels-de-la-circulation/)
+.reduite.center[![](https://datactivist.coop/aaf/img/accidents.png)]
+---
+### .red[Exemple d'usage] : Les accidents de la route
+.reduite.center[![](img/trajetleplussur.png)]
+.footnote[Plus d'accidents sur l'A8 mais surtout plus de véhicules…]
+
+---
+### Exemple de données ouvertes : les [inspections des restaurants](https://www.data.gouv.fr/fr/datasets/resultats-des-controles-officiels-sanitaires-dispositif-dinformation-alimconfiance/)
+.reduite.center[![](img/aliminfos.png)]
+.footnote[[Résultats des contrôles officiels sanitaires : dispositif d'information « Alim’confiance »](https://www.data.gouv.fr/fr/datasets/resultats-des-controles-officiels-sanitaires-dispositif-dinformation-alimconfiance/)]
+---
+### red[Exemple d'usage] : les inspections des restaurants
+.reduite[.center[![](img/resto.png)]]
+.footnote[[155 établissements dont l'hygiène doit être corrigée de manière urgente ](https://dgal.opendatasoft.com/explore/dataset/export_alimconfiance/table/?disjunctive.filtre&amp;disjunctive.app_libelle_activite_etablissement&amp;disjunctive.ods_type_activite&amp;refine.synthese_eval_sanit=A+corriger+de+mani%C3%A8re+urgente)]
+---
+### Exemple de données ouvertes : le [répertoire national des élus](https://www.data.gouv.fr/fr/datasets/donnees-du-repertoire-national-des-elus/)
+
+.reduite.center[
+![](./img/repelus.png)
+]
+
+---
+### Exemple de données ouvertes : les [valeurs foncières](https://www.data.gouv.fr/fr/datasets/demandes-de-valeurs-foncieres/#_)
+
+![](./img/dvf.png)
+---
+### Les valeurs foncières
+
+.reduite.center[
+[![](./img/meilleursagents.png)](https://www.meilleursagents.com/prix-immobilier/dvf/aix-en-provence-13100/avenue-saint-jerome-1108044769/)
+]
+
+---
+### Exemple de données ouvertes : le [fichier des personnes décédées](https://www.data.gouv.fr/fr/datasets/fichier-des-personnes-decedees/)
+
+![](img/deces.png)
+
+---
+### red[Exemple d'usage] : le [fichier des personnes décédées](https://www.data.gouv.fr/fr/datasets/fichier-des-personnes-decedees/)
+
+[![](https://static.data.gouv.fr/images/90/4a69979666463f9a3297bef0d3c91a.png)](https://deces.matchid.io/)
+---
+class: inverse, center, middle
+
+# Les bénéfices de l'ouverture des données
+
+
+---
+class: inverse, center, middle
+
+# Les facteurs clés de succès d'un projet d'open data 
+
 ---
 class: inverse, center, middle
 
@@ -313,7 +534,7 @@ Contact : [joel@datactivist.coop](mailto:joel@datactivist.coop)
 "highlightStyle": "github",
 "highlightLines": true,
 "countIncrementalSlides": false,
-"slideNumberFormat": "<div class=\"progress-bar-container\">   <div class=\"progress-bar\" style=\"width: calc(%current% / %total% * 100%);\">   </div> </div> "
+"slideNumberFormat": "<div class=\"progress-bar-container\">\n  <div class=\"progress-bar\" style=\"width: calc(%current% / %total% * 100%);\">\n  </div>\n</div>\n"
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));
