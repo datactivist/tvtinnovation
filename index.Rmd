@@ -1,0 +1,312 @@
+---
+title: "Open data : on s'inspire"
+subtitle: ""
+author: "Samuel Goëta, Datactivist"
+date: "Ateliers TVT Innovation, Accélérez votre démarche OPEN DATA"
+output:
+  SlidesDatactivist::moon_reader:
+    css: [default, datactivist, datactivist-fonts]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      beforeInit: ["macros.js", "matomo.js", "https://platform.twitter.com/widgets.js"]
+      slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>
+params:
+  event: Open data on s'inspire
+  slug: tvtinnovation
+  description:  un atelier sur les benefices et les facteurs cles de succes de l'ouverture des donnees pour les territoires
+  title: Open data on s'inspire
+  image: https://github.com/datactivist/slides_datactivist/raw/master/inst/rmarkdown/templates/xaringan/resources/img/logo.png
+  image_alt: le logo de Datactivist
+---
+
+```{r, echo=FALSE}
+library(metathis)
+meta() %>% 
+  meta_description(params$event) %>% 
+  meta_name("github-repo" = paste0("datactivist/", params$slug)) %>% 
+  meta_viewport() %>% 
+  meta_social(
+    title = params$title,
+    url = paste0("https://datactivist.coop/", params$slug),
+    image = params$image,
+    image_alt = params$image_alt,
+    og_type = "website",
+    og_author = "Datactivist",
+    og_locale = "fr_FR",
+    og_site_name = "Datactivist",
+    twitter_card_type = "summary",
+    twitter_creator = "@datactivi_st")
+
+```
+
+layout: true
+
+<style>
+.remark-slide-number {
+  position: inherit;
+}
+
+.remark-slide-number .progress-bar-container {
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  display: block;
+  left: 0;
+  right: 0;
+}
+
+.remark-slide-number .progress-bar {
+  height: 100%;
+  background-color: #e95459;
+}
+
+</style>
+
+
+`r paste0("<div class='my-footer'><span>", params$event, "</span> <center><div class=logo><a href='https://datactivist.coop/'><img src='https://github.com/datactivist/slides_datactivist/raw/master/inst/rmarkdown/templates/xaringan/resources/img/fond_noir_monochrome.png' width='100px'></a></div></center></span></div>")` 
+
+
+---
+
+class: center, middle
+
+Ces slides en ligne : `r paste0("http://datactivist.coop/", params$slug)`
+
+Sources : `r paste0("https://github.com/datactivist/", params$slug)`
+
+
+Les productions de Datactivist sont librement réutilisables selon les termes de la licence [Creative Commons 4.0 BY-SA](https://creativecommons.org/licenses/by-sa/4.0/legalcode.fr).
+
+<BR>
+<BR>
+
+![](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png)
+
+
+---
+class: middle, center
+
+TVT Innovation vous propose deux ateliers virtuels pour favoriser et accélérer l’engagement initié par votre structure concernant l’ouverture des données. Ces deux ateliers ont pour objectif de vous sensibiliser vous, fournisseurs de data, à l'ouverture de vos données, lever vos potentielles réticences et vous accompagner dans l'ouverture de celles-ci. 
+ 
+![:largeur 20%](https://upload.wikimedia.org/wikipedia/fr/thumb/4/47/Logo_PACA_2018.svg/376px-Logo_PACA_2018.svg.png)
+
+**Un projet soutenu par la Région Sud dans le cadre de l'appel à projet "Données ouvertes et intelligentes".** 
+
+---
+### Au programme
+
+.pull-left[
+#### 1er atelier : OPEN DATA, ON S'INSPIRE ! 
+* Rappel des principes, contexte et cadre juridique de l'open data
+
+* Les bénéfices de l'ouverture des données pour les territoires (étude de cas)
+
+* Les facteurs clés de succès d'un projet d'open data 
+]
+
+.pull-right[
+#### 2nd atelier : OPEN DATA, ON SE LANCE ! 
+* Sélectionner les données
+
+* Préparer les données
+
+* Diffuser et valoriser les données
+
+]
+
+---
+class: inverse, center, middle
+
+### Ces dix choses incroyables qui n'auraient pas existé sans l'open data
+
+---
+class: inverse, center, middle
+
+# 1. Yuka
+
+.center[![](https://datactivist.coop/lewagon/img/logo_yuka.png)]
+
+---
+
+![](https://datactivist.coop/lewagon/img/visuel_yuka.png)
+
+---
+## Yuka 
+
+### 8,5 millions d'utilisateurs
+### 2 millions de produits scannés chaque jour
+### Top 10 des applis gratuites sur l'Appstore et le Playstore
+
+---
+
+[.center[![](https://datactivist.coop/lewagon/img/snapshot_off.png)]](https://fr.openfoodfacts.org/decouvrir)
+
+
+---
+class: inverse, center, middle
+
+# 2. Pokemon go 
+
+.center[![](https://datactivist.coop/lewagon/img/pokemon_go.jpg)]
+
+---
+
+[.center[![](https://datactivist.coop/lewagon/img/pokemon_tod.png)]](https://teamopendata.org/t/pokemon-go-migre-sur-openstreetmap/113)
+
+
+---
+
+
+## Google Maps
+
+![](https://datactivist.coop/lewagon/img/gmaps.png)
+
+---
+## OpenStreetMap
+
+![](https://datactivist.coop/lewagon/img/osm.png)
+
+---
+## OpenStreetMap
+
+![](https://datactivist.coop/lewagon/img/osm_edit.png)
+
+---
+## OpenStreetMap
+
+[![](https://datactivist.coop/lewagon/img/openinframap.png)](https://openinframap.org/#11.9/48.86066/2.33825/O,P)
+
+
+---
+class: inverse, center, middle
+
+# 3. Une carte de la pollution de l'air dans les écoles
+
+---
+
+## Merci AirParif !
+
+[![](https://datactivist.coop/lewagon/img/respire.png)](https://carte-des-ecoles.de-l-air-pour-nos-enfants.fr/)
+
+---
+
+[![](https://datactivist.coop/lewagon/img/respire_od.png)](https://www.data.gouv.fr/fr/datasets/base-de-donnees-de-la-pollution-aerienne-aux-abords-des-ecoles-et-creches-dile-de-france/)
+
+---
+class: inverse, center, middle
+
+# 4. Les applis de mobilité
+
+---
+## Les applis de mobilité
+
+
+.center[.reduite[![](https://datactivist.coop/lewagon/img/CityMapper.png)]]
+
+---
+## Les applis de mobilité
+
+.center[.reduite[![](https://datactivist.coop/lewagon/img/Moovit.png)]]
+
+---
+## Les applis de mobilité
+
+.center[.reduite[![](https://datactivist.coop/lewagon/img/pilote.png)]]
+
+
+---
+## Les applis de mobilité
+
+.center[.reduite[![](https://datactivist.coop/lewagon/img/pilote_datasud.png)]]
+
+---
+class: inverse, center, middle
+
+
+# 5. Les prix de l'immobilier 
+
+---
+
+[.center[![](https://datactivist.coop/lewagon/img/dvf.png)]](https://www.meilleursagents.com/prix-immobilier/dvf/)
+
+---
+## Une réutilisation rendue possible par l'ouverture de données publiques
+
+[.center[![](https://datactivist.coop/lewagon/img/dvf_dgf.png)]](https://www.data.gouv.fr/fr/reuses/explorateur-de-biens-vendus/)
+
+---
+class: inverse, center, middle
+
+# 6. Un référentiel ouvert et partagé d'adressage
+
+---
+
+[![](./img/adresses.png)](https://adresse.data.gouv.fr/)
+
+---
+class: inverse, center, middle
+
+# 7. Mapillary
+
+---
+## Mapillary
+
+[![](https://datactivist.coop/lewagon/img/mapillary1.png)](https://www.mapillary.com/map/im/AB9hac4KYucSZOaWQyunvw)
+
+http://www.villes-internet.net/actions/5bbf52afbb3eab784351e5c5
+
+---
+## Mapillary
+
+[![](https://datactivist.coop/lewagon/img/mapillary2.png)](https://www.mapillary.com/map/im/AB9hac4KYucSZOaWQyunvw)
+
+---
+## 8. Les tests Covid
+
+.pull-left[
+Le 13 January 2020, 13 jours après l'annonce par la Chine d'un nouveau virus, le génome du SARS COV-2 a été publié sur la base internationale de données génétiques, GenBank.
+
+![:largeur 30%](img/genbank.png)
+
+.pull-left[
+Le 15 janvier 2020, 13 jours après l'annonce par la Chine d'un nouveau virus, le génome du SARS COV-2 a été publié sur la base internationale de données génétiques, GenBank.
+
+![:largeur 30%](img/pcr.png)]
+
+.footnote[Source : Wikipedia, [chronologie de la pandémie de Covid-19](https://en.wikipedia.org/wiki/Timeline_of_the_COVID-19_pandemic_in_January_2020)]
+
+]
+
+.pull-right[
+
+]
+---
+class: inverse, center, middle
+
+
+# 10. Et pour finir... des cocktails !
+
+---
+## Des recettes de cocktails 
+
+<iframe style="width: 80vw; height: 50vh; border: none;" src="https://query.wikidata.org/embed.html#%23defaultView%3AImageGrid%0ASELECT%20%3Fcocktail%20%3FcocktailLabel%20(SAMPLE(%3Frecipe)%20AS%20%3Frecipe)%20(SAMPLE(%3Fimage)%20AS%20%3Fimage)%0AWHERE%0A%7B%0A%20%20%7B%0A%20%20%20%20SELECT%20%3Fcocktail%20%3FcocktailLabel%20(GROUP_CONCAT(DISTINCT%20%3Fingredient%3B%20separator%3D%22%2C%20%22)%20AS%20%3FingredientsList)%20(GROUP_CONCAT(DISTINCT%20%3FgarnishLabel%3B%20separator%3D%22%2C%20%22)%20AS%20%3FgarnishList)%20(COUNT(DISTINCT%20%3Fingredient)%20%2B%20COUNT(DISTINCT%20%3FgarnishLabel)%20AS%20%3Fcount)%0A%20%20%20%20WHERE%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%3Fcocktail%20wdt%3AP31%2Fwdt%3AP279*%20wd%3AQ134768%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20p%3AP186%20%3FmaterialStat.%0A%20%20%20%20%20%20MINUS%20%7B%20%3FmaterialStat%20pq%3AP518%2Fwdt%3AP279*%20wd%3AQ2453629.%20%7D%0A%20%20%20%20%20%20MINUS%20%7B%20%3FmaterialStat%20ps%3AP186%20wd%3AQ488463%3B%20pq%3AP366%20wd%3AQ26876981.%20%7D%0A%20%20%20%20%20%20MINUS%20%7B%20%3FmaterialStat%20pq%3AP366%20wd%3AQ59541.%20%7D%0A%20%20%20%20%20%20%3FmaterialStat%20ps%3AP186%2Frdfs%3Alabel%20%3FmaterialLabel.%0A%20%20%20%20%20%20FILTER(LANG(%3FmaterialLabel)%20%3D%20%22en%22).%0A%20%20%20%20%20%20BIND(%3FmaterialLabel%20AS%20%3FingredientSolo).%0A%20%20%20%20%20%20OPTIONAL%20%7B%0A%20%20%20%20%20%20%20%20%3FmaterialStat%20ps%3AP186%2Frdfs%3Alabel%20%3FmaterialLabel%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20pq%3AP1114%20%3Fquantity.%0A%20%20%20%20%20%20%20%20FILTER(LANG(%3FmaterialLabel)%20%3D%20%22en%22).%0A%20%20%20%20%20%20%20%20BIND(CONCAT(STR(%3Fquantity)%2C%20%22%20%22%2C%20%3FmaterialLabel)%20AS%20%3FingredientWithQuantity).%0A%20%20%20%20%20%20%20%20OPTIONAL%20%7B%0A%20%20%20%20%20%20%20%20%20%20%3FmaterialStat%20pq%3AP1114%20%3Fquantity%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20ps%3AP186%2Frdfs%3Alabel%20%3FmaterialLabel%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20pqv%3AP1114%2Fwikibase%3AquantityUnit%20%3Funit.%0A%20%20%20%20%20%20%20%20%20%20FILTER(LANG(%3FmaterialLabel)%20%3D%20%22en%22).%0A%20%20%20%20%20%20%20%20%20%20FILTER(%3Funit%20!%3D%20wd%3AQ199).%0A%20%20%20%20%20%20%20%20%20%20%3Funit%20rdfs%3Alabel%20%3FunitLabel.%0A%20%20%20%20%20%20%20%20%20%20FILTER(LANG(%3FunitLabel)%20%3D%20%22en%22).%0A%20%20%20%20%20%20%20%20%20%20BIND(CONCAT(STR(%3Fquantity)%2C%20%22%20%22%2C%20IF(%3Fquantity%20%3D%201%2C%20%3FunitLabel%2C%20CONCAT(%3FunitLabel%2C%20IF(STRENDS(%3FunitLabel%2C%20%22sh%22)%2C%20%22es%22%2C%20%22s%22)))%2C%20%22%20%22%2C%20%3FmaterialLabel)%20AS%20%3FingredientWithUnit).%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20BIND(COALESCE(%3FingredientWithUnit%2C%20%3FingredientWithQuantity%2C%20%3FingredientSolo)%20AS%20%3Fingredient).%0A%20%20%20%20%20%20OPTIONAL%20%7B%0A%20%20%20%20%20%20%20%20%3Fcocktail%20p%3AP186%20%5B%20ps%3AP186%20%3Fgarnish%3B%20pq%3AP366%20wd%3AQ59541%20%5D.%0A%20%20%20%20%20%20%20%20%3Fgarnish%20rdfs%3Alabel%20%3FgarnishLabel.%0A%20%20%20%20%20%20%20%20FILTER(LANG(%3FgarnishLabel)%20%3D%20%22en%22).%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%3Fcocktail%20rdfs%3Alabel%20%3FcocktailLabel.%0A%20%20%20%20%20%20FILTER(LANG(%3FcocktailLabel)%20%3D%20%22en%22).%0A%20%20%20%20%7D%0A%20%20%20%20GROUP%20BY%20%3Fcocktail%20%3FcocktailLabel%0A%20%20%7D%0A%20%20BIND(%0A%20%20%20%20IF(REGEX(%3FingredientsList%2C%20%22%2C%20.*%2C%22)%2C%0A%20%20%20%20%20%20%20REPLACE(%3FingredientsList%2C%20%22(.*)%2C%20(.*)%22%2C%20%22%241%2C%20and%20%242%22)%2C%0A%20%20%20%20%20%20%20REPLACE(%3FingredientsList%2C%20%22(.*)%2C%20(.*)%22%2C%20%22%241%20and%20%242%22))%0A%20%20%20%20AS%20%3Fingredients).%0A%20%20BIND(%0A%20%20%20%20IF(REGEX(%3FgarnishList%2C%20%22%2C%20.*%2C%22)%2C%0A%20%20%20%20%20%20%20REPLACE(%3FgarnishList%2C%20%22(.*)%2C%20(.*)%22%2C%20%22%241%2C%20and%20%242%22)%2C%0A%20%20%20%20%20%20%20REPLACE(%3FgarnishList%2C%20%22(.*)%2C%20(.*)%22%2C%20%22%241%20and%20%242%22))%0A%20%20%20%20AS%20%3Fgarnishes).%0A%20%20OPTIONAL%20%7B%0A%20%20%20%20%3Fcocktail%20p%3AP186%20%5B%20ps%3AP186%20%3Fglass%3B%20pq%3AP518%2Fwdt%3AP279*%20wd%3AQ2453629%20%5D.%0A%20%20%20%20%3Fglass%20rdfs%3Alabel%20%3FglassLabel.%0A%20%20%20%20FILTER(LANG(%3FglassLabel)%20%3D%20%22en%22).%0A%20%20%20%20BIND(IF(REGEX(%3FglassLabel%2C%20%22%5E%5BAEIOUaeiou%5D%22)%2C%20%22an%22%2C%20%22a%22)%20AS%20%3Farticle).%0A%20%20%20%20BIND(CONCAT(%22%20in%20%22%2C%20%3Farticle%2C%20%22%20%22%2C%20%3FglassLabel)%20AS%20%3Fcontainer).%0A%20%20%20%20BIND(%22%2C%20served%22%20AS%20%3Fserved).%0A%20%20%7D%0A%20%20OPTIONAL%20%7B%0A%20%20%20%20%3Fcocktail%20p%3AP186%20%5B%20ps%3AP186%20wd%3AQ488463%3B%20pq%3AP366%20wd%3AQ26876981%20%5D.%0A%20%20%20%20BIND(%22%20on%20the%20rocks%22%20AS%20%3FonTheRocks).%0A%20%20%20%20BIND(%22%2C%20served%22%20AS%20%3Fserved).%0A%20%20%7D%0A%20%20OPTIONAL%20%7B%0A%20%20%20%20FILTER(STRLEN(STR(%3Fgarnishes))%20%3E%201).%0A%20%20%20%20BIND(CONCAT(%22%20with%20%22%2C%20%3Fgarnishes)%20AS%20%3Fgarnish).%0A%20%20%20%20BIND(%22%2C%20served%22%20AS%20%3Fserved).%0A%20%20%7D%0A%20%20BIND(CONCAT(%0A%20%20%20%20%3Fingredients%2C%0A%20%20%20%20COALESCE(%3Fserved%2C%20%22%22)%2C%0A%20%20%20%20COALESCE(%3FonTheRocks%2C%20%22%22)%2C%0A%20%20%20%20COALESCE(%3Fgarnish%2C%20%22%22)%2C%0A%20%20%20%20COALESCE(%3Fcontainer%2C%20%22%22))%0A%20%20%20%20AS%20%3Frecipe).%0A%20%20OPTIONAL%20%7B%20%3Fcocktail%20wdt%3AP18%20%3Fimage.%20%7D%0A%7D%0AGROUP%20BY%20%3Fcocktail%20%3FcocktailLabel%0AORDER%20BY%20DESC(MAX(%3Fcount))" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+
+---
+## Wikidata
+
+[![](./img/wikidata.png)](https://www.wikidata.org/)
+---
+class: inverse, center, middle
+
+# Merci !
+
+Contact : [joel@datactivist.coop](mailto:joel@datactivist.coop)
+
+
