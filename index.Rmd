@@ -624,7 +624,64 @@ Une action publique plus claire. Exemple à Issy Les Moulineaux :
 [![](img/issy.png)](https://data.issy.com/pages/tableaux-de-bord-issy/)
 
 ---
+### Pour impliquer davantage les citoyens dans la production des données
 
+Exemple de CartoQuartiers à Nantes
+
+[![](img/cartoquartier.png)](https://www.cartoquartiers.fr/)
+
+---
+### Pour être plus forts ensemble, et plus souverains sur nos données
+
+[MapCompare](https://tools.geofabrik.de/mc/#17/43.5032/5.3828&num=4&mt0=mapnik&mt1=google-map&mt2=mapnik-german&mt3=here-map) : comparer OSM, Google Maps et Here Maps
+
+![](img/mapcomapre.png)
+
+---
+### Pour être plus forts ensemble, et plus souverains sur nos données
+
+![](img/openagenda.png)
+---
+### Pour la data science et les savoirs ouverts
+
+Exemple autour de la base de données sur les accidents de la route
+				
+![](img/paris.png)		
+---
+### Pour la data science et les savoirs ouverts  		
+
+Exemple autour de la base de données sur les accidents de la route
+
+![](img/bretagne.png)
+
+---
+### Pour le data journalisme
+
+[![](img/datajourno.png)](https://www.nytimes.com/interactive/2018/03/19/upshot/race-class-white-and-black-men.html)
+
+---
+### Pour permettre le développement de  nouveaux services
+
+#### …mais garder en tête que l’open data est un investissement de long terme 
+
+.reduite.center[![](img/benefits.png)]
+
+---
+### Pour permettre le développement de  nouveaux services
+
+[![](img/justinbiker.png)](http://citizenclan.org)
+
+---
+### Pour permettre le développement de  nouveaux services
+
+[![](img/handisco.png)](http://handisco.com)
+
+---
+### Pour améliorer l’efficience des services 
+
+![](img/tfl.png)
+
+---
 class: inverse, center, middle
 
 # Les facteurs clés de succès d'un projet d'open data 
