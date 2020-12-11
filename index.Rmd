@@ -687,6 +687,10 @@ class: inverse, center, middle
 # Les facteurs clés de succès d'un projet d'open data 
 
 ---
+
+![](https://datactivist.coop/aaf/img/10commandements.png)
+
+---
 class: inverse, center, middle
 
 # Merci !
