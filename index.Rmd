@@ -271,7 +271,7 @@ Le **5 janvier 2020**, 5 jours après l'annonce par la Chine d'un nouveau virus,
 ]
 
 .pull-right[
-Le **15 janvier 2020**, 10 jours plus tard, sur la base de ces données, une équipe de recherches allemande crée le premier test PCR de dépistage de la Covid-19. 
+Le **13 janvier 2020**, sur la base de ces données, une équipe de recherches allemande crée le premier test PCR de dépistage de la Covid-19. 
 
 ![](img/pcr.png)
 
@@ -316,11 +316,6 @@ class: inverse, center, middle
 
 
 # Rappel des principes, contexte et cadre juridique de l'open data
-
----
-class: inverse, center, middle
-
-# Les bénéfices de l'ouverture des données pour les territoires (étude de cas)
 
 
 ---
@@ -511,6 +506,8 @@ Utiliser une autre licence impose une **homologation** auprès de la DINSIC avec
 class: inverse, center, middle
 
 # Les bénéfices de l'ouverture des données
+
+---
 
 
 ---
