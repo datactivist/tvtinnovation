@@ -445,7 +445,7 @@ Utiliser une autre licence impose une **homologation** auprès de la DINSIC avec
 ### Loi pour une République numérique : une limitation des licences
 
 .reduite.center[
-[![](./img/licences.png)](http://www.opendatalab.fr/index.php/laboratoire/le-kit-collectivites)
+[![](https://datactivist.coop/aaf/img/licences.png)](http://www.opendatalab.fr/index.php/laboratoire/le-kit-collectivites)
 ]
 .footnote[source : [SGAR Occitanie](http://www.opendatalab.fr/index.php/laboratoire/le-kit-collectivites)]
 
@@ -464,56 +464,228 @@ Utiliser une autre licence impose une **homologation** auprès de la DINSIC avec
 .reduite.center[![](https://datactivist.coop/aaf/img/accidents.png)]
 ---
 ### .red[Exemple d'usage] : Les accidents de la route
-.reduite.center[![](img/trajetleplussur.png)]
+.reduite.center[![](https://datactivist.coop/aaf/img/trajetleplussur.png)]
 .footnote[Plus d'accidents sur l'A8 mais surtout plus de véhicules…]
 
 ---
 ### Exemple de données ouvertes : les [inspections des restaurants](https://www.data.gouv.fr/fr/datasets/resultats-des-controles-officiels-sanitaires-dispositif-dinformation-alimconfiance/)
-.reduite.center[![](img/aliminfos.png)]
+.reduite.center[![](https://datactivist.coop/aaf/img/aliminfos.png)]
 .footnote[[Résultats des contrôles officiels sanitaires : dispositif d'information « Alim’confiance »](https://www.data.gouv.fr/fr/datasets/resultats-des-controles-officiels-sanitaires-dispositif-dinformation-alimconfiance/)]
 ---
-### red[Exemple d'usage] : les inspections des restaurants
-.reduite[.center[![](img/resto.png)]]
+### .red[Exemple d'usage] : les inspections des restaurants
+.reduite[.center[![](https://datactivist.coop/aaf/img/resto.png)]]
 .footnote[[155 établissements dont l'hygiène doit être corrigée de manière urgente ](https://dgal.opendatasoft.com/explore/dataset/export_alimconfiance/table/?disjunctive.filtre&disjunctive.app_libelle_activite_etablissement&disjunctive.ods_type_activite&refine.synthese_eval_sanit=A+corriger+de+mani%C3%A8re+urgente)]
 ---
 ### Exemple de données ouvertes : le [répertoire national des élus](https://www.data.gouv.fr/fr/datasets/donnees-du-repertoire-national-des-elus/)
 
 .reduite.center[
-![](./img/repelus.png)
+![](https://datactivist.coop/aaf/img/repelus.png)
 ]
 
 ---
 ### Exemple de données ouvertes : les [valeurs foncières](https://www.data.gouv.fr/fr/datasets/demandes-de-valeurs-foncieres/#_)
 
-![](./img/dvf.png)
+![](https://datactivist.coop/aaf/img/dvf.png)
 ---
-### Les valeurs foncières
+### .red[Exemple d'usage : ]Les valeurs foncières
 
 .reduite.center[
-[![](./img/meilleursagents.png)](https://www.meilleursagents.com/prix-immobilier/dvf/aix-en-provence-13100/avenue-saint-jerome-1108044769/)
+[![](https://datactivist.coop/aaf/img/meilleursagents.png)](https://www.meilleursagents.com/prix-immobilier/dvf/aix-en-provence-13100/avenue-saint-jerome-1108044769/)
 ]
 
----
-### Exemple de données ouvertes : le [fichier des personnes décédées](https://www.data.gouv.fr/fr/datasets/fichier-des-personnes-decedees/)
-
-![](img/deces.png)
-
----
-### red[Exemple d'usage] : le [fichier des personnes décédées](https://www.data.gouv.fr/fr/datasets/fichier-des-personnes-decedees/)
-
-[![](https://static.data.gouv.fr/images/90/4a69979666463f9a3297bef0d3c91a.png)](https://deces.matchid.io/)
 ---
 class: inverse, center, middle
 
 # Les bénéfices de l'ouverture des données
 
+
+---
+### Valoriser le travail d’une administration ou d’une entreprise
+
+Le département de la Gironde a produit un travail de visualisation et d'explication du budget en 2019 à partir de ses données ouvertes ([source](https://www.gironde.fr/un-budget-au-service-des-solidarites-humaine-et-territoriale)). 
+
+.reduite.center[
+![](img/gironde.png)
+]
+
+---
+### Valoriser le travail d’une administration ou d’une entreprise
+
+Le département de la Gironde a produit un travail de visualisation et d'explication du budget en 2019 à partir de ses données ouvertes ([source](https://www.gironde.fr/un-budget-au-service-des-solidarites-humaine-et-territoriale)). 
+
+.pull-left[
+![](img/gironde2.png)
+]
+
+.pull-right[
+![](img/gironde3.png)
+]
+
+---
+### Renforcer les principes du service public
+
+
+#### Continuité : des données accessibles en permanence et mises à jour
+
+
+#### Adaptabilité : des données adaptées à la demande (formats, nature, services)
+
 ---
 
+
+#### Egalité : des données accessibles à tous, sans restriction ni discrimination			
+				
+			
+
+---
+### Faire gagner du temps aux différents services
+
+Répondre moins souvent aux demandes individuelles du fait de la publicité des données	: 
+
+![](img/demandes.png)
+
+---
+### Ouvrir les possibilités de croisements de données
+
+Exemple des vélos en libre service à New York : confronter modèles et usages
+
+
+![](img/citybike$.png)
+
+---
+### Questionner des politiques publiques
+
+Exemple des dataviz sur les vélos en libre service				
+
+[![](img/bikeshare.png)](https://bikesharemap.com/)
+
+---
+### Améliorer la qualité des données
+
+.pull-left[
+
+#### En donnant de la visibilité aux données
+
+#### + d’audience 
+
+#### = + de corrections
+			
+]
+
+
+.pull-right[
+
+![](img/lille.png)
+]
+
+---
+### Améliorer la qualité des données
+
+Grâce à la comparaison de données ouvertes : exemple à Poitiers
+
+![](img/poitiers.png)
+---
+
+### Révéler des enjeux de souveraineté  sur les données et des SI 
+
+.pull-left[
+* Connaître les données dont on est propriétaire
+
+* Savoir qui est légitime pour les mettre à jour
+
+* Connaître les données qu’on ne possède pas
+
+* Créer des liens (API) avec les partenaires, délégataires, prestataires
+
+* Négocier des accès aux données (échanges)
+
+]
+
+.pull-right[
+.reduite[![](img/iceberg.png)]
+]
+
+---
+### Pour la transparence de l’action publique 
+
+La transparence : pilier pour la démocratie
+
+.reduite.center[![](img/opengov.png)]
+
+
+---
+### Pour la transparence de l’action publique
+
+Une action publique plus claire. Exemple à Issy Les Moulineaux : 
+
+[![](img/issy.png)](https://data.issy.com/pages/tableaux-de-bord-issy/)
+
+---
+### Pour impliquer davantage les citoyens dans la production des données
+
+Exemple de CartoQuartiers à Nantes
+
+[![](img/cartoquartier.png)](https://www.cartoquartiers.fr/)
+
+---
+### Pour être plus forts ensemble, et plus souverains sur nos données
+
+[MapCompare](https://tools.geofabrik.de/mc/#17/43.5032/5.3828&num=4&mt0=mapnik&mt1=google-map&mt2=mapnik-german&mt3=here-map) : comparer OSM, Google Maps et Here Maps
+
+![](img/mapcomapre.png)
+
+---
+### Pour être plus forts ensemble, et plus souverains sur nos données
+
+![](img/openagenda.png)
+---
+### Pour la data science et les savoirs ouverts
+
+Exemple autour de la base de données sur les accidents de la route
+				
+![](img/paris.png)		
+---
+### Pour la data science et les savoirs ouverts  		
+
+Exemple autour de la base de données sur les accidents de la route
+
+![](img/bretagne.png)
+
+---
+### Pour le data journalisme
+
+[![](img/datajourno.png)](https://www.nytimes.com/interactive/2018/03/19/upshot/race-class-white-and-black-men.html)
+
+---
+### Pour permettre le développement de  nouveaux services
+
+#### …mais garder en tête que l’open data est un investissement de long terme 
+
+.reduite.center[![](img/benefits.png)]
+
+---
+### Pour permettre le développement de  nouveaux services
+
+[![](img/justinbiker.png)](http://citizenclan.org)
+
+---
+### Pour permettre le développement de  nouveaux services
+
+[![](img/handisco.png)](http://handisco.com)
+
+---
+### Pour améliorer l’efficience des services 
+
+![](img/tfl.png)
 
 ---
 class: inverse, center, middle
 
 # Les facteurs clés de succès d'un projet d'open data 
+
+---
+
+![](https://datactivist.coop/aaf/img/10commandements.png)
 
 ---
 class: inverse, center, middle
