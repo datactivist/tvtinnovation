@@ -184,7 +184,7 @@ Source : [Trousse d’outils maison de données ouvertes du Canada](https://ouve
 ---
 #### S'appuyer sur le recensement des données .red[des départements]
 
-En 2019, Datactivist et les étudiants de la licence [LP MIND ](http://web-filieres.iut.u-bordeaux-montaigne.fr/lpmind/) de l'IUT de Bordeaux ont conduit un recensement des données ouvertes par 10 départements. 
+En 2019, Datactivist et les étudiants de la [licence pro MIND](http://web-filieres.iut.u-bordeaux-montaigne.fr/lpmind/) de l'IUT de Bordeaux ont conduit un recensement des données ouvertes par 10 départements. 
 
 <iframe class="airtable-embed" src="https://airtable.com/embed/shr2IV29hiRCyh32o?backgroundColor=cyan" frameborder="0" onmousewheel="" width="100%" height="463" style="background: transparent; border: 1px solid #ccc;"></iframe>
 
@@ -367,7 +367,7 @@ N'importe quel acteur public ou privé peut y publier des données, y compris de
 
 * **Inciter les services producteurs à ouvrir** les données qu’ils produisent et à utiliser les données ouvertes pour leurs propres usages.
 
-* **Diffuser une culture de la donnée* au sein de l’organisation afin d’accompagner le développement des usages et favoriser la transformation de l’action publique (pilotage, évaluation, etc.) à partir des données.
+* **Diffuser une culture de la donnée** au sein de l’organisation afin d’accompagner le développement des usages et favoriser la transformation de l’action publique (pilotage, évaluation, etc.) à partir des données.
 
 * Favoriser les **échanges entre pairs** pour partager des retours d’expérience et des bonnes pratiques.
 
